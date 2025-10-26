@@ -24,14 +24,12 @@ except Exception as e:
         raise RuntimeError(f'ERRO: {ex}.\n\n==> Verifique as versões instaladas de pandas/pyarrow e considere reinstalar/atualizar. ')
 
 df.rename(columns={'Status ': 'Status'}, inplace=True)
-df
-# %%
-df.dtypes
-# %%
-df.shape
-# %%
-from sklearn import tree
 
+# df
+# df.dtypes
+# df.shape
+
+from sklearn import tree
 
 sw_model = tree.DecisionTreeClassifier()
 
@@ -50,7 +48,7 @@ sw_X = learn_df[sw_features]
 sw_y = learn_df[sw_target]
 
 sw_model.fit(X=sw_X, y=sw_y)
-# %%
+
 import matplotlib.pyplot as plt
 
 
@@ -63,6 +61,6 @@ tree.plot_tree(
     feature_names=sw_features,
     class_names=sw_class_names,
     filled=True,
-    max_depth=3,
+    max_depth=6,
 )
 # %%
