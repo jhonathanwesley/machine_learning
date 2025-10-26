@@ -1,6 +1,8 @@
 scikit-learn
+fastparquet
 matplotlib
 ipykernel
 openpyxl
 ipython
+pyarrow
 pandas
