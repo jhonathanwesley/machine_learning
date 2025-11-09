@@ -53,3 +53,11 @@ plt.plot(X.drop_duplicates()['cerveja'], predict_arvore_d1) # Profundidade max �
 
 # Legenda para cada elemento do gráfico
 plt.legend(['Observado', f"f(x) = {a:.3f} + {b:.3f} x", 'Árvore Full', 'Árvore Depth = 2', 'Árvore Depth = 1'])
+
+plt.figure(dpi=500)
+
+tree.plot_tree(
+    arvore_d2,
+    feature_names=['cerveja'],
+    filled=True
+)
